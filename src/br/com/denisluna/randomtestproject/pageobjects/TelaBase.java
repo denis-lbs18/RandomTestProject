@@ -2,13 +2,11 @@ package br.com.denisluna.randomtestproject.pageobjects;
 
 import org.openqa.selenium.WebDriver;
 
-import Mapa_Objetos_Menus.TelaMenuPrincipal;
-import Utils.ElementoWebUtils;
+import br.com.denisluna.randomtestproject.utils.ElementoWebUtils;
 
 public class TelaBase {
 	protected WebDriver driver;
 	protected ElementoWebUtils elemento;
-	protected TelaMenuPrincipal menuPrincipal;
 
 	public TelaBase(WebDriver driver) {
 		this.driver = driver;
