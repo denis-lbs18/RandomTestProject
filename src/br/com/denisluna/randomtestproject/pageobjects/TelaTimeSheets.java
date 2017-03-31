@@ -3,7 +3,7 @@ package br.com.denisluna.randomtestproject.pageobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import br.com.rsinet.ibpj.utils.TempoTimeouts;
+import br.com.denisluna.randomtestproject.utils.TempoTimeouts;
 
 public class TelaTimeSheets extends TelaBase {
 	private By linkCriarNovoTimeSheet = By.xpath(".//*[@id='acao249']/a");
