@@ -2,8 +2,8 @@ package br.com.denisluna.randomtestproject.pageobjects;
 
 import org.openqa.selenium.WebDriver;
 
-import Mapa_Objetos_Menus.TelaMenuPrincipal;
-import Utils.ElementoWebUtils;
+import br.com.rsinet.ibpj.pageobjects.menus.TelaMenuPrincipal;
+import br.com.rsinet.ibpj.utils.ElementoWebUtils;
 
 public class TelaBase {
 	protected WebDriver driver;
