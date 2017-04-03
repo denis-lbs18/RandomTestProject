@@ -31,7 +31,7 @@ public class ProcessoMainLancaTimeSheetDiaAnterior {
 		telaTimeSheets.setInputDataTrabalhada(dataTrabalhada);
 		telaTimeSheets.setInputHorasTrabalhadas(horasTrabalhadas);
 		telaTimeSheets.setInputDescricao("Automação de Testes novo IBPJ.");
-		// telaTimeSheets.clicaBotaoSalvar();
+		telaTimeSheets.clicaBotaoSalvar();
 		telaTimeSheets.fecha();
 	}
 }
