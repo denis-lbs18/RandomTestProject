@@ -11,6 +11,7 @@ import br.com.denisluna.randomtestproject.pageobjects.TelaTimeSheets;
 public class ProcessoMainLancaTimeSheetDiaAnterior {
 
 	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver", "data/geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 
 		TelaHome telaHome = new TelaDeLogin(driver).loga();
@@ -30,7 +31,7 @@ public class ProcessoMainLancaTimeSheetDiaAnterior {
 		telaTimeSheets.setInputDataTrabalhada(dataTrabalhada);
 		telaTimeSheets.setInputHorasTrabalhadas(horasTrabalhadas);
 		telaTimeSheets.setInputDescricao("Automação de Testes novo IBPJ.");
-		telaTimeSheets.clicaBotaoSalvar();
+		// telaTimeSheets.clicaBotaoSalvar();
 		telaTimeSheets.fecha();
 	}
 }

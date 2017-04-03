@@ -12,69 +12,18 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/selenium-ibesrv"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/apache-mime4j-0.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/BootsFaces-OSP-0.9.1-dist-default.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/bsh-1.3.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/cglib-nodep-2.1_3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/classworlds-1.1-alpha-2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/commons-codec-1.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/commons-collections-3.2.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/commons-exec-1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/commons-io-2.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/commons-io-2.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/commons-io-2.5-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/commons-jxpath-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/commons-lang3-3.3.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/commons-logging-1.1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/cssparser-0.9.14.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/guava-15.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/hamcrest-library-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/htmlunit-2.15.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/htmlunit-core-js-2.15.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/httpclient-4.3.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/httpcore-4.3.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/httpmime-4.3.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/ini4j-0.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/javax.mail-1.5.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/javax.mail-api-1.5.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/jcommander-1.29.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/jetty-websocket-8.1.8.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/jna-3.4.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/jna-platform-3.4.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/json-20080701.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/junit-dep-4.11.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/jxl.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/maven-plugin-annotations-3.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/maven-reporting-api-3.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/maven-reporting-impl-2.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/nekohtml-1.9.21.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/netty-3.5.7.Final.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/operadriver-1.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/phantomjsdriver-1.1.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/plexus-classworlds-2.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/plexus-container-default-1.0-alpha-9-stable-1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/poi-3.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/poi-ooxml-3.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/poi-ooxml-3.9-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/poi-ooxml-schemas-3.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/protobuf-java-2.4.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/sac-1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/selenium-java-2.43.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/selenium-java-2.43.1-srcs.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/serializer-2.7.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/surefire-report-parser-2.17.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/testng-6.8.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/testng-6.9.12-20160617.211721-23-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/testng-6.9.13-20160814.202052-21-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/xalan-2.7.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/xercesImpl-2.11.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/xml-apis-1.4.01.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Santander/Programação/selenium-ibesrv/lib/xmlbeans-2.3.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Santander/.m2/repository/org/seleniumhq/selenium/selenium-api/3.3.1/selenium-api-3.3.1.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
+			<attribute name="maven.artifactId" value="selenium-api"/>
+			<attribute name="maven.version" value="3.3.1"/>
+			<attribute name="maven.scope" value="compile"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
