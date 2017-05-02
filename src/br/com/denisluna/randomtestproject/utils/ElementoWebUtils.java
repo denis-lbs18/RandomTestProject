@@ -166,7 +166,7 @@ public class ElementoWebUtils {
 			this.sleep(TempoTimeouts.TEMPOPADRAOTELA);
 			elemento.sendKeys(Keys.ENTER);
 		} catch (Exception ex) {
-			System.out.println("Erro ao selecionar opção por texto.");
+			System.out.println("Erro ao selecionar opção por texto." + ex.getClass().getSimpleName());
 		}
 	}
 

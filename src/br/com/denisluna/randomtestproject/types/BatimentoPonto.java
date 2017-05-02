@@ -13,7 +13,7 @@ public class BatimentoPonto extends TimerTask {
 
 	@Override
 	public void run() {
-
+		System.setProperty("webdriver.gecko.driver", "data/geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		this.telaHome = new TelaDeLogin(driver).loga();
 		this.telaHome.clicaBotaoPeriodo();

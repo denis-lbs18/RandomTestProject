@@ -21,31 +21,37 @@ public class TelaTimeSheets extends TelaBase {
 
 	public void clicaLinkCriarNovoTimeSheet() {
 		this.getElemento().elementoWebClica(this.linkCriarNovoTimeSheet);
+		this.sleep(TempoTimeouts.TEMPOMEDIO);
 	}
 
 	public void selecionaProjeto(int index) {
 		this.sleep(TempoTimeouts.TEMPOCURTO);
 		this.getElemento().elementoWebSelecionaListaPorIndex(this.selectProjeto, index);
+		this.sleep(TempoTimeouts.TEMPOMEDIO);
 	}
 
 	public void selecionaProjeto(String value) {
 		this.sleep(TempoTimeouts.TEMPOCURTO);
 		this.getElemento().elementoWebSelecionaListaPorTexto(this.selectProjeto, value);
+		this.sleep(TempoTimeouts.TEMPOMEDIO);
 	}
 
 	public void selecionaDemanda(int index) {
 		this.sleep(TempoTimeouts.TEMPOCURTO);
 		this.getElemento().elementoWebSelecionaListaPorIndex(this.selectDemanda, index);
+		this.sleep(TempoTimeouts.TEMPOMEDIO);
 	}
 
 	public void selecionaDemanda(String value) {
 		this.sleep(TempoTimeouts.TEMPOCURTO);
 		this.getElemento().elementoWebSelecionaListaPorTexto(this.selectDemanda, value);
+		this.sleep(TempoTimeouts.TEMPOMEDIO);
 	}
 
 	public void selecionaTarefa(int index) {
 		this.sleep(TempoTimeouts.TEMPOCURTO);
 		this.getElemento().elementoWebSelecionaListaPorIndex(this.selectTarefa, index);
+		this.sleep(TempoTimeouts.TEMPOMEDIO);
 	}
 
 	public void selecionaTarefa(String value) {
@@ -59,14 +65,17 @@ public class TelaTimeSheets extends TelaBase {
 	}
 
 	public void setInputDataTrabalhada(String value) {
+		this.sleep(TempoTimeouts.TEMPOCURTO);
 		this.getElemento().elementoWebInsereTexto(this.inputDataTrabalhada, value);
 	}
 
 	public void setInputHorasTrabalhadas(String value) {
+		this.sleep(TempoTimeouts.TEMPOCURTO);
 		this.getElemento().elementoWebInsereTexto(this.inputHorasTrabalhadas, value);
 	}
 
 	public void clicaBotaoSalvar() {
 		this.getElemento().elementoWebClica(this.botaoSalvar);
+		this.sleep(TempoTimeouts.TEMPOLONGO);
 	}
 }

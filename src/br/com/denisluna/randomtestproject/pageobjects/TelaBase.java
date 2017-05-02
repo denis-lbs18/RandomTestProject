@@ -3,6 +3,7 @@ package br.com.denisluna.randomtestproject.pageobjects;
 import org.openqa.selenium.WebDriver;
 
 import br.com.denisluna.randomtestproject.utils.ElementoWebUtils;
+import br.com.denisluna.randomtestproject.utils.TempoTimeouts;
 
 public class TelaBase {
 	protected WebDriver driver;
@@ -30,7 +31,8 @@ public class TelaBase {
 	}
 
 	public void fecha() {
-		this.getDriver().close();
+		this.getDriver().quit();
+		this.sleep(TempoTimeouts.TEMPOMEDIO);
 	}
 
 	public void startURL() {
