@@ -16,7 +16,10 @@ public class BatimentoPonto extends TimerTask {
 		System.setProperty("webdriver.gecko.driver", "data/geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		this.telaHome = new TelaDeLogin(driver).loga();
-		this.telaHome.clicaBotaoPeriodo();
+		this.telaHome.selecionaFilial("Osasco");
+		this.telaHome.selecionaPlanta(1);
+		this.telaHome.clicaMenuPonto();
+		this.telaHome.clicaMenuLancamentoDePonto().clicaBotaoEfetuarLancamento();
 		this.telaHome.fecha();
 	}
 }

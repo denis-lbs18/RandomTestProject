@@ -1,5 +1,9 @@
 package br.com.denisluna.randomtestproject.utils;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
@@ -301,5 +305,32 @@ public class ElementoWebUtils {
 
 	public String elementoWebPegaTexto(By by) {
 		return this.elementoWebAchaElemento(by).getText();
+	}
+
+	public String elementoWebPegaAtributo(By by, String atributo) {
+		return this.elementoWebAchaElemento(by).getAttribute(atributo);
+	}
+
+	public void elementoWebSelecionaDatePicker(By by, String data) {
+		DateFormat dateFormat = new SimpleDateFormat("d");
+		Date date2 = null;
+
+		try {
+			date2 = dateFormat.parse(data);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+
+		String dataBusca = dateFormat.format(date2);
+
+		WebElement dateWidget = this.elementoWebAchaElemento(by);
+		List<WebElement> columns = dateWidget.findElements(By.tagName("td"));
+
+		for (WebElement cell : columns) {
+			if (cell.getText().equals(dataBusca)) {
+				cell.click();
+				break;
+			}
+		}
 	}
 }

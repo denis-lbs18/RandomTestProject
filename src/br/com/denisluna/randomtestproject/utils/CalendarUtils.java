@@ -1,5 +1,7 @@
 package br.com.denisluna.randomtestproject.utils;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -31,6 +33,21 @@ public class CalendarUtils {
 
 	public Date getTime() {
 		return this.calendario.getTime();
+	}
 
+	private Date ontem() {
+		final Calendar cal = Calendar.getInstance();
+		cal.add(Calendar.DATE, -1);
+		return cal.getTime();
+	}
+
+	public String getDataOntem() {
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		return dateFormat.format(this.ontem());
+	}
+
+	public int getDia() {
+		DateFormat dateFormat = new SimpleDateFormat("dd");
+		return Integer.parseInt(dateFormat.format(this.ontem()));
 	}
 }
