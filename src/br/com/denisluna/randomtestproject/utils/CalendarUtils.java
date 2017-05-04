@@ -41,9 +41,19 @@ public class CalendarUtils {
 		return cal.getTime();
 	}
 
+	private Date hoje() {
+		final Calendar cal = Calendar.getInstance();
+		return cal.getTime();
+	}
+
 	public String getDataOntem() {
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		return dateFormat.format(this.ontem());
+	}
+
+	public String getDataHoje() {
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		return dateFormat.format(this.hoje());
 	}
 
 	public int getDia() {
