@@ -20,20 +20,19 @@ public class ProcessoMainEncerraTrabalhoLancaTimeSheet {
 		telaHome.setDadosIniciais();
 
 		telaHome.clicaMenuPonto();
-		telaHome.clicaMenuLancamentoDePonto().clicaBotaoEfetuarLancamento();
+		TelaControleDoPonto telaPonto = telaHome.clicaMenuLancamentoDePonto();
+		telaPonto.clicaBotaoEfetuarLancamento();
 
-		telaHome.clicaMenuPonto();
-		TelaControleDoPonto telaPonto = telaHome.clicaMenuConsultaDeHistorico();
+		CalendarUtils calendar = new CalendarUtils();
 
-		telaPonto.selecionaColaborador(1);
-		telaPonto.setDataInicial(new CalendarUtils().getDataHoje());
-		telaPonto.setDataFinal(new CalendarUtils().getDataHoje());
-		telaPonto.clicaBotaoPesquisar();
-
-		String dataTrabalhada = telaPonto.getDataDiaAtual();
-		String horasTrabalhadas = telaPonto.getTotalHorasDiaAtual();
+		String dataTrabalhada = calendar.getDataHoje();
+		String horaAlmoco = calendar.subtraiHoras(telaPonto.getHoraSaida1(), telaPonto.getHoraEntrada2());
+		String horaTrabalho = calendar.subtraiHoras(telaPonto.getHoraEntrada1(), telaPonto.getHoraSaida2());
+		String horasTrabalhadas = calendar.subtraiHoras(horaAlmoco, horaTrabalho);
 
 		System.out.println(dataTrabalhada);
+		System.out.println(horaAlmoco);
+		System.out.println(horaTrabalho);
 		System.out.println(horasTrabalhadas);
 
 		telaHome.clicaMenuTimeSheet();

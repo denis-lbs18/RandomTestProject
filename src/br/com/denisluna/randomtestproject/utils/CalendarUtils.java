@@ -1,6 +1,7 @@
 package br.com.denisluna.randomtestproject.utils;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -37,7 +38,14 @@ public class CalendarUtils {
 
 	private Date ontem() {
 		final Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.DATE, -1);
+		int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
+
+		if (dayOfWeek == 2) {
+			cal.add(Calendar.DATE, -3);
+		} else {
+			cal.add(Calendar.DATE, -1);
+		}
+
 		return cal.getTime();
 	}
 
@@ -59,5 +67,35 @@ public class CalendarUtils {
 	public int getDia() {
 		DateFormat dateFormat = new SimpleDateFormat("dd");
 		return Integer.parseInt(dateFormat.format(this.ontem()));
+	}
+
+	public String subtraiHoras(String hora1, String hora2) {
+		long second = 1000l;
+		long minute = 60l * second;
+		long hour = 60l * minute;
+
+		SimpleDateFormat formatter = new SimpleDateFormat("hh:mm");
+
+		Date dt1 = null;
+		try {
+			dt1 = formatter.parse(hora1);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		Date dt2 = null;
+		try {
+			dt2 = formatter.parse(hora2);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		long diff = dt2.getTime() - dt1.getTime();
+
+		String retorno = String.format("%02d", diff / hour) + ":" + String.format("%02d", (diff % hour) / minute);
+
+		return retorno;
 	}
 }

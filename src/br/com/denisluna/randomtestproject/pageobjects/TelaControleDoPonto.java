@@ -16,6 +16,11 @@ public class TelaControleDoPonto extends TelaBase {
 	private By tableTotalHorasDiaAtual = ByUtils.encontraByClass(ByUtils.TD, "Col-Center", 8);
 	private By botaoEfetuarLancamento = ByUtils.encontraByClass(ByUtils.INPUT, "btn");
 
+	private By tableHoraEntrada1 = ByUtils.encontraByClass(ByUtils.TD, "Col-Center", 2);
+	private By tableHoraSaida1 = ByUtils.encontraByClass(ByUtils.TD, "Col-Center", 4);
+	private By tableHoraEntrada2 = ByUtils.encontraByClass(ByUtils.TD, "Col-Center", 6);
+	private By tableHoraSaida2 = ByUtils.encontraByClass(ByUtils.TD, "Col-Center", 8);
+
 	public TelaControleDoPonto(WebDriver driver) {
 		super(driver);
 	}
@@ -52,5 +57,21 @@ public class TelaControleDoPonto extends TelaBase {
 	public void clicaBotaoEfetuarLancamento() {
 		this.getElemento().elementoWebClica(this.botaoEfetuarLancamento);
 		this.sleep(TempoTimeouts.TEMPOMEDIO);
+	}
+
+	public String getHoraEntrada1() {
+		return this.getElemento().elementoWebPegaTexto(this.tableHoraEntrada1).trim();
+	}
+
+	public String getHoraEntrada2() {
+		return this.getElemento().elementoWebPegaTexto(this.tableHoraEntrada2).trim();
+	}
+
+	public String getHoraSaida1() {
+		return this.getElemento().elementoWebPegaTexto(this.tableHoraSaida1).trim();
+	}
+
+	public String getHoraSaida2() {
+		return this.getElemento().elementoWebPegaTexto(this.tableHoraSaida2).trim();
 	}
 }
