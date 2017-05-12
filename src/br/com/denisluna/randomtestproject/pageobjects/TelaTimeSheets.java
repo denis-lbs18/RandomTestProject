@@ -7,7 +7,7 @@ import br.com.denisluna.randomtestproject.utils.ByUtils;
 import br.com.denisluna.randomtestproject.utils.TempoTimeouts;
 
 public class TelaTimeSheets extends TelaBase {
-	private By botaoLancarTimeSheet = ByUtils.encontraByValue(ByUtils.INPUT, "Lançar TimeSheet");
+	private By botaoLancarTimeSheet = ByUtils.encontraByValue(ByUtils.INPUT, "LanÃ§ar TimeSheet");
 	private By selectProjeto = ByUtils.encontraBySelect(1);
 	private By selectDemanda = ByUtils.encontraBySelect(2);
 	private By selectTarefa = ByUtils.encontraBySelect(3);

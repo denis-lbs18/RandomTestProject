@@ -19,9 +19,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Classe que trabalha com wait do WebElement, permitindo que o objeto esteja
- * clic·vel antes de executar o cÛdigo.
+ * clic√°vel antes de executar o c√≥digo.
  * 
- * @author X187841
+ * @author Denis Luna Borges da Silva
  *
  */
 ;
@@ -40,9 +40,9 @@ public class ElementoWebUtils {
 	}
 
 	/**
-	 * retorna o codigo HTML da p·gina
+	 * retorna o codigo HTML da p√°gina
 	 * 
-	 * @return o codigo HTML da p·gina
+	 * @return o codigo HTML da p√°gina
 	 */
 	public String getCodigoHTML() {
 		//
@@ -61,14 +61,14 @@ public class ElementoWebUtils {
 	}
 
 	/**
-	 * MÈtodo que acha a referÍncia WebElement na p·gina. Usufrui do recurso
-	 * WebDriverWait: A cada x segundos definidos pela ENUM TEMPOPOLLING, ser·
-	 * efetuada uma busca pelo elemento, em atÈ y segundos, com timeout definido
+	 * M√©todo que acha a refer√™ncia WebElement na p√°gina. Usufrui do recurso
+	 * WebDriverWait: A cada x segundos definidos pela ENUM TEMPOPOLLING, ser√°
+	 * efetuada uma busca pelo elemento, em at√© y segundos, com timeout definido
 	 * pela ENUM TEMPOWAIT
 	 * 
 	 * @param by
 	 *            o identificador By do elemento a ser encontrado
-	 * @return WebElement encontrado na p·gina atravÈs do By
+	 * @return WebElement encontrado na p√°gina atrav√©s do By
 	 */
 	private WebElement elementoWebAchaElemento(By by) {
 		WebElement elemento = (new WebDriverWait(this.getDriver(), TempoTimeouts.TEMPOWAIT))
@@ -80,7 +80,7 @@ public class ElementoWebUtils {
 	}
 
 	/**
-	 * MÈtodo que executa um Thread.sleep, efetuando uma pausa no teste.
+	 * M√©todo que executa um Thread.sleep, efetuando uma pausa no teste.
 	 * 
 	 * @param l
 	 *            quantidade de milissegundos que o teste deve aguardar
@@ -94,11 +94,11 @@ public class ElementoWebUtils {
 	}
 
 	/**
-	 * MÈtodo que busca clicar no elemento, impedindo que o erro "element is no
-	 * longer attached to the DOM" aconteÁa
+	 * M√©todo que busca clicar no elemento, impedindo que o erro "element is no
+	 * longer attached to the DOM" aconte√ßa
 	 * 
 	 * @param elemento
-	 *            a referencia WebElement dentro da p·gina
+	 *            a referencia WebElement dentro da p√°gina
 	 * @param by
 	 *            o identificador By do elemento a ser selecionado
 	 */
@@ -106,19 +106,19 @@ public class ElementoWebUtils {
 		try {
 			elemento.click();
 		} catch (StaleElementReferenceException ex) {
-			System.out.println("Elemento n„o visÌvel.");
+			System.out.println("Elemento n√£o vis√≠vel.");
 			elemento = this.getDriver().findElement(by);
 		}
 	}
 
 	/**
-	 * MÈtodo que permite selecionar uma opÁ„o do combobox pelo index. Seleciona
-	 * o Ìndice na lista e aperta o enter.
+	 * M√©todo que permite selecionar uma op√ß√£o do combobox pelo index. Seleciona
+	 * o √≠ndice na lista e aperta o enter.
 	 * 
 	 * @param by
 	 *            o identificador By do elemento a ser selecionado
 	 * @param index
-	 *            o Ìndice a ser escolhido dentro do combobox
+	 *            o √≠ndice a ser escolhido dentro do combobox
 	 */
 	public void elementoWebSelecionaListaPorIndex(By by, int index) {
 		try {
@@ -130,12 +130,12 @@ public class ElementoWebUtils {
 			this.sleep(TempoTimeouts.TEMPOPADRAOTELA);
 			elemento.sendKeys(Keys.ENTER);
 		} catch (Exception ex) {
-			System.out.println("Erro ao selecionar opÁ„o por index.");
+			System.out.println("Erro ao selecionar op√ß√£o por index.");
 		}
 	}
 
 	/**
-	 * metodo para seleÁ„o de opÁ„o em combobox
+	 * metodo para sele√ß√£o de op√ß√£o em combobox
 	 * 
 	 * @param by
 	 * @param option
@@ -152,7 +152,7 @@ public class ElementoWebUtils {
 	}
 
 	/**
-	 * MÈtodo que permite selecionar uma opÁ„o do combobox pelo texto. Seleciona
+	 * M√©todo que permite selecionar uma op√ß√£o do combobox pelo texto. Seleciona
 	 * o texto da lista e aplica o enter.
 	 * 
 	 * @param by
@@ -170,13 +170,13 @@ public class ElementoWebUtils {
 			this.sleep(TempoTimeouts.TEMPOPADRAOTELA);
 			elemento.sendKeys(Keys.ENTER);
 		} catch (Exception ex) {
-			System.out.println("Erro ao selecionar opÁ„o por texto." + ex.getClass().getSimpleName());
+			System.out.println("Erro ao selecionar op√ß√£o por texto." + ex.getClass().getSimpleName());
 		}
 	}
 
 	/**
-	 * MÈtodo que permite inserir texto em um input WebElement. Recebe como
-	 * par‚metros o By do elemento e o texto a ser inserido.
+	 * M√©todo que permite inserir texto em um input WebElement. Recebe como
+	 * par√¢metros o By do elemento e o texto a ser inserido.
 	 * 
 	 * @param by
 	 *            o identificador By do elemento a ser selecionado
@@ -188,7 +188,7 @@ public class ElementoWebUtils {
 	}
 
 	/**
-	 * MÈtodo que permite utilizar o mÈtodo click() em um WebElement.
+	 * M√©todo que permite utilizar o M√©todo click() em um WebElement.
 	 * 
 	 * @param by
 	 *            o identificador By do elemento a ser selecionado
@@ -201,7 +201,7 @@ public class ElementoWebUtils {
 	}
 
 	/**
-	 * MÈtodo que limpa o texto do elemento web.
+	 * M√©todo que limpa o texto do elemento web.
 	 * 
 	 * @param by
 	 *            o identificador By do elemento a ser selecionado
@@ -211,76 +211,76 @@ public class ElementoWebUtils {
 	}
 
 	/**
-	 * MÈtodo que retorna se elemento web est· visÌvel na tela.
+	 * M√©todo que retorna se elemento web est√° vis√≠vel na tela.
 	 * 
 	 * @param by
 	 *            o identificador By do elemento a ser selecionado
-	 * @return boolean que identifica se o objeto est· visÌvel ou n„o
+	 * @return boolean que identifica se o objeto est√° vis√≠vel ou n√£o
 	 */
 	public boolean elementoWebEstaVisivel(By by) {
 		try {
 			return this.getDriver().findElement(by).isDisplayed();
 		} catch (NoSuchElementException ex) {
-			System.out.println("Elemento n„o visÌvel (NoSuchElementException).");
+			System.out.println("Elemento n√£o vis√≠vel (NoSuchElementException).");
 			return false;
 		} catch (StaleElementReferenceException ex) {
-			System.out.println("Elemento n„o visÌvel (StaleElementReferenceException).");
+			System.out.println("Elemento n√£o vis√≠vel (StaleElementReferenceException).");
 			return false;
 		} catch (Exception ex) {
-			System.out.println("Elemento n„o visÌvel " + ex.getMessage());
+			System.out.println("Elemento n√£o vis√≠vel " + ex.getMessage());
 			return false;
 		}
 	}
 
 	/**
-	 * MÈtodo que retorna se elemento web est· visÌvel na tela, utilizando o
-	 * recurso WebDriverWait que espera um determinado tempo atÈ o elemento
-	 * ficar visÌvel.
+	 * M√©todo que retorna se elemento web est√° vis√≠vel na tela, utilizando o
+	 * recurso WebDriverWait que espera um determinado tempo at√© o elemento
+	 * ficar vis√≠vel.
 	 * 
 	 * @param by
 	 *            o identificador By do elemento a ser selecionado
-	 * @return boolean que identifica se o objeto est· visÌvel ou n„o
+	 * @return boolean que identifica se o objeto est√° vis√≠vel ou n√£o
 	 */
 	public boolean elementoWebEstaVisivelWait(By by) {
 		try {
 			WebElement elemento = this.elementoWebAchaElemento(by);
 			return this.elementoWebEstaVisivelWait(elemento);
 		} catch (NoSuchElementException ex) {
-			System.out.println("Elemento n„o visÌvel (NoSuchElementException).");
+			System.out.println("Elemento n√£o vis√≠vel (NoSuchElementException).");
 			return false;
 		} catch (StaleElementReferenceException ex) {
-			System.out.println("Elemento n„o visÌvel (StaleElementReferenceException).");
+			System.out.println("Elemento n√£o vis√≠vel (StaleElementReferenceException).");
 			return false;
 		} catch (Exception ex) {
-			System.out.println(("Elemento n„o visÌvel " + ex.getMessage()));
+			System.out.println(("Elemento n√£o vis√≠vel " + ex.getMessage()));
 			return false;
 		}
 	}
 
 	/**
-	 * MÈtodo que retorna se elemento web est· visÌvel na tela.
+	 * M√©todo que retorna se elemento web est√° vis√≠vel na tela.
 	 * 
 	 * @param by
 	 *            o identificador By do elemento a ser selecionado
-	 * @return boolean que identifica se o objeto est· visÌvel ou n„o
+	 * @return boolean que identifica se o objeto est√° vis√≠vel ou n√£o
 	 */
 	public boolean elementoWebEstaVisivelWait(WebElement elemento) {
 		try {
 			return elemento.isDisplayed();
 		} catch (NoSuchElementException ex) {
-			System.out.println("Elemento n„o visÌvel (NoSuchElementException).");
+			System.out.println("Elemento n√£o vis√≠vel (NoSuchElementException).");
 			return false;
 		} catch (StaleElementReferenceException ex) {
-			System.out.println("Elemento n„o visÌvel (StaleElementReferenceException).");
+			System.out.println("Elemento n√£o vis√≠vel (StaleElementReferenceException).");
 			return false;
 		} catch (Exception ex) {
-			System.out.println("Elemento n„o visÌvel " + ex.getMessage());
+			System.out.println("Elemento n√£o vis√≠vel " + ex.getMessage());
 			return false;
 		}
 	}
 
 	/**
-	 * MÈtodo que retorna se elemento web est· habilitado na tela.
+	 * M√©todo que retorna se elemento web est√° habilitado na tela.
 	 * 
 	 * @param by
 	 *            o identificador By do elemento a ser selecionado
@@ -292,8 +292,8 @@ public class ElementoWebUtils {
 	}
 
 	/**
-	 * MÈtodo que retorna se elemento web est· habilitado na tela. Recebe como
-	 * par‚metro o By do elemento. Utiliza o mÈtodo WebDriverWait
+	 * M√©todo que retorna se elemento web est√° habilitado na tela. Recebe como
+	 * par√¢metro o By do elemento. Utiliza o m√©todo WebDriverWait
 	 * 
 	 * @param by
 	 * @return

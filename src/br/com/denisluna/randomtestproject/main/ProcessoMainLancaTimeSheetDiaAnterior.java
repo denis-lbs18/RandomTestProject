@@ -37,12 +37,12 @@ public class ProcessoMainLancaTimeSheetDiaAnterior {
 		telaTimeSheets.clicaBotaoLancarTimeSheet();
 		telaTimeSheets.selecionaProjeto(1);
 		telaTimeSheets.selecionaDemanda(1);
-		telaTimeSheets.selecionaTarefa("An·lise e HomologaÁ„o");
+		telaTimeSheets.selecionaTarefa("An√°lise e Homologa√ß√£o");
 
 		telaTimeSheets.setInputDataTrabalhada(dataTrabalhada);
 		telaTimeSheets.setInputHorasTrabalhadas(horasTrabalhadas);
 
-		telaTimeSheets.setInputDescricao("AutomaÁ„o de Testes novo IBPJ.");
+		telaTimeSheets.setInputDescricao("Automa√ß√£o de Testes novo IBPJ.");
 		telaTimeSheets.clicaBotaoSalvar();
 		telaTimeSheets.fecha();
 	}

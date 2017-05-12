@@ -10,10 +10,10 @@ public class TelaHome extends TelaBase {
 	private By selectFilial = ByUtils.encontraBySelect(1);
 	private By selectPlanta = ByUtils.encontraBySelect(2);
 	private By menuPonto = ByUtils.encontraByTextoContains(ByUtils.A_LINK, "Ponto");
-	private By menuLancamentoDoPonto = ByUtils.encontraByTextoContains(ByUtils.A_LINK, "Lançamento de Ponto");
-	private By menuConsultaDeHistorico = ByUtils.encontraByTextoContains(ByUtils.A_LINK, "Consulta de Histórico");
+	private By menuLancamentoDoPonto = ByUtils.encontraByTextoContains(ByUtils.A_LINK, "LanÃ§amento de Ponto");
+	private By menuConsultaDeHistorico = ByUtils.encontraByTextoContains(ByUtils.A_LINK, "Consulta de HistÃ³rico");
 	private By menuTimeSheets = ByUtils.encontraByTextoContains(ByUtils.A_LINK, "TimeSheet");
-	private By menuLancamentoDeTimeSheet = ByUtils.encontraByTextoContains(ByUtils.A_LINK, "Lançamento de TimeSheet");
+	private By menuLancamentoDeTimeSheet = ByUtils.encontraByTextoContains(ByUtils.A_LINK, "LanÃ§amento de TimeSheet");
 
 	public TelaHome(WebDriver driver) {
 		super(driver);
