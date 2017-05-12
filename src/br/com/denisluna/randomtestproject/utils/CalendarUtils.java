@@ -80,7 +80,6 @@ public class CalendarUtils {
 		try {
 			dt1 = formatter.parse(hora1);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -88,7 +87,6 @@ public class CalendarUtils {
 		try {
 			dt2 = formatter.parse(hora2);
 		} catch (ParseException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
