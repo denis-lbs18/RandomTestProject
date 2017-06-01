@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import br.com.denisluna.randomtestproject.utils.ByUtils;
+import br.com.denisluna.randomtestproject.utils.JsonUtils;
 
 public class TelaDeLogin extends TelaBase {
 	private By inputLogin = ByUtils.encontraByID(ByUtils.INPUT, "txtLogin");
@@ -37,11 +38,12 @@ public class TelaDeLogin extends TelaBase {
 	}
 
 	public TelaHome loga() {
-		this.navega("http://sco.rsinet.com.br/");
+		JsonUtils json = new JsonUtils();
+		this.navega(json.getUrl());
 		this.maximizaBrowser();
 		this.setChave(this.getChave());
-		this.setLogin("denis.silva");
-		this.setSenha("dnsCasados20");
+		this.setLogin(json.getUsuario());
+		this.setSenha(json.getSenha());
 		this.clicaBotaoEntrar();
 
 		return new TelaHome(this.getDriver());

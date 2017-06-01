@@ -9,10 +9,10 @@ import br.com.denisluna.randomtestproject.utils.TempoTimeouts;
 public class TelaHome extends TelaBase {
 	private By selectFilial = ByUtils.encontraBySelect(1);
 	private By selectPlanta = ByUtils.encontraBySelect(2);
-	private By menuPonto = ByUtils.encontraByTextoContains(ByUtils.A_LINK, "Ponto");
+	private By menuPonto = ByUtils.encontraByClass(ByUtils.A_LINK, "dropdown-toggle", 2);
 	private By menuLancamentoDoPonto = ByUtils.encontraByTextoContains(ByUtils.A_LINK, "Lançamento de Ponto");
 	private By menuConsultaDeHistorico = ByUtils.encontraByTextoContains(ByUtils.A_LINK, "Consulta de Histórico");
-	private By menuTimeSheets = ByUtils.encontraByTextoContains(ByUtils.A_LINK, "TimeSheet");
+	private By menuTimeSheets = ByUtils.encontraByClass(ByUtils.A_LINK, "dropdown-toggle", 3);
 	private By menuLancamentoDeTimeSheet = ByUtils.encontraByTextoContains(ByUtils.A_LINK, "Lançamento de TimeSheet");
 
 	public TelaHome(WebDriver driver) {
