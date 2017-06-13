@@ -7,9 +7,13 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 public class JsonUtils {
-	public String url;
-	public String usuario;
-	public String senha;
+	private String url;
+	private String usuario;
+	private String senha;
+	private long projeto;
+	private long demanda;
+	private long tarefa;
+	private String descricao;
 
 	public JsonUtils() {
 		this.abreArquivo();
@@ -39,6 +43,38 @@ public class JsonUtils {
 		this.senha = senha;
 	}
 
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public int getProjeto() {
+		return (int) projeto;
+	}
+
+	public void setProjeto(Long long1) {
+		this.projeto = long1;
+	}
+
+	public int getDemanda() {
+		return (int) demanda;
+	}
+
+	public void setDemanda(Long long1) {
+		this.demanda = long1;
+	}
+
+	public int getTarefa() {
+		return (int) tarefa;
+	}
+
+	public void setTarefa(Long long1) {
+		this.tarefa = long1;
+	}
+
 	public void abreArquivo() {
 		JSONParser parser = new JSONParser();
 		try {
@@ -49,6 +85,10 @@ public class JsonUtils {
 			this.setUrl((String) jsonObject.get("url"));
 			this.setUsuario((String) jsonObject.get("usuario"));
 			this.setSenha((String) jsonObject.get("senha"));
+			this.setDescricao((String) jsonObject.get("Automação de Testes novo IBPJ."));
+			this.setProjeto((Long) jsonObject.get("projeto"));
+			this.setDemanda((Long) jsonObject.get("demanda"));
+			this.setTarefa((Long) jsonObject.get("tarefa"));
 		} catch (FileNotFoundException fe) {
 			fe.printStackTrace();
 		} catch (Exception e) {

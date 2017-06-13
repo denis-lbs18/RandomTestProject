@@ -8,10 +8,13 @@ import br.com.denisluna.randomtestproject.pageobjects.TelaDeLogin;
 import br.com.denisluna.randomtestproject.pageobjects.TelaHome;
 import br.com.denisluna.randomtestproject.pageobjects.TelaTimeSheets;
 import br.com.denisluna.randomtestproject.utils.CalendarUtils;
+import br.com.denisluna.randomtestproject.utils.JsonUtils;
 
 public class ProcessoMainEncerraTrabalhoLancaTimeSheet {
 
 	public static void main(String[] args) {
+		final JsonUtils jsonReader = new JsonUtils();
+
 		System.setProperty("webdriver.gecko.driver", "data/geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 
@@ -39,14 +42,14 @@ public class ProcessoMainEncerraTrabalhoLancaTimeSheet {
 		TelaTimeSheets telaTimeSheets = telaHome.clicaMenuLancamentoDeTimeSheets();
 
 		telaTimeSheets.clicaBotaoLancarTimeSheet();
-		telaTimeSheets.selecionaProjeto(1);
-		telaTimeSheets.selecionaDemanda(1);
-		telaTimeSheets.selecionaTarefa("Análise e Homologação");
+		telaTimeSheets.selecionaProjeto(jsonReader.getProjeto());
+		telaTimeSheets.selecionaDemanda(jsonReader.getDemanda());
+		telaTimeSheets.selecionaTarefa(jsonReader.getTarefa());
 
 		telaTimeSheets.setInputDataTrabalhada(dataTrabalhada);
 		telaTimeSheets.setInputHorasTrabalhadas(horasTrabalhadas);
 
-		telaTimeSheets.setInputDescricao("Automação de Testes novo IBPJ.");
+		telaTimeSheets.setInputDescricao(jsonReader.getDescricao());
 		telaTimeSheets.clicaBotaoSalvar();
 		telaTimeSheets.fecha();
 	}
