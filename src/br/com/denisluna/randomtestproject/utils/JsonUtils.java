@@ -85,10 +85,10 @@ public class JsonUtils {
 			this.setUrl((String) jsonObject.get("url"));
 			this.setUsuario((String) jsonObject.get("usuario"));
 			this.setSenha((String) jsonObject.get("senha"));
-			this.setDescricao((String) jsonObject.get("Automação de Testes novo IBPJ."));
 			this.setProjeto((Long) jsonObject.get("projeto"));
 			this.setDemanda((Long) jsonObject.get("demanda"));
 			this.setTarefa((Long) jsonObject.get("tarefa"));
+			this.setDescricao((String) jsonObject.get("descricao"));
 		} catch (FileNotFoundException fe) {
 			fe.printStackTrace();
 		} catch (Exception e) {

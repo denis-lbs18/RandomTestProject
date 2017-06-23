@@ -20,15 +20,11 @@ public class ProcessoMainLancaTimeSheetDiaAnterior {
 		telaHome.setDadosIniciais();
 		/*
 		 * telaHome.clicaMenuPonto(); TelaControleDoPonto telaPonto =
-		 * telaHome.clicaMenuConsultaDeHistorico();
-		 * 
-		 * telaPonto.selecionaColaborador(1); telaPonto.setDataInicial(new
-		 * CalendarUtils().getDataOntem()); telaPonto.setDataFinal(new
-		 * CalendarUtils().getDataOntem()); telaPonto.clicaBotaoPesquisar();
+		 * telaHome.clicaMenuLancamentoDePonto();
+		 * telaPonto.clicaBotaoEfetuarLancamento();
 		 */
-
-		String dataTrabalhada = "12/06/2017";
-		String horasTrabalhadas = "08:26";
+		String dataTrabalhada = "22/06/2017";
+		String horasTrabalhadas = "08:11";
 
 		System.out.println(dataTrabalhada);
 		System.out.println(horasTrabalhadas);
@@ -46,7 +42,7 @@ public class ProcessoMainLancaTimeSheetDiaAnterior {
 
 		telaTimeSheets.setInputDescricao(jsonReader.getDescricao());
 
-		// telaTimeSheets.clicaBotaoSalvar();
+		telaTimeSheets.clicaBotaoSalvar();
 		telaTimeSheets.fecha();
 	}
 }

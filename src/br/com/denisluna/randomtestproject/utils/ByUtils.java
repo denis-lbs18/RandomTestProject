@@ -6,7 +6,7 @@ public abstract class ByUtils {
 
 	public final static String A_LINK = "a", DIV = "div", SPAN = "span", INPUT = "input", SELECT = "select",
 			BUTTON = "button", ALL = "*", TD = "td", LABEL = "label", IMG = "img", H1 = "H1", H2 = "H2", H3 = "H3",
-			H4 = "H4", H5 = "H5", B = "b", TEXTAREA = "textarea";
+			H4 = "H4", H5 = "H5", B = "b", TEXTAREA = "textarea", TABLE = "table";
 
 	public static By encontraBy(String elemento, String id, String classe) {
 		return By.xpath(String.format("//%1$s[(@id='%2$s') or (@class = '%3$s')]", elemento, id, classe));
@@ -70,5 +70,15 @@ public abstract class ByUtils {
 
 	public static By encontraBySelect(int index) {
 		return By.xpath(String.format("(//%1$s[contains(@class,'form-control')])[%2$d]", ByUtils.SELECT, index));
+	}
+
+	public static By encontraByTableData(String classe, int linha, int coluna) {
+		return By.xpath(
+				String.format("//%1$s[@id='%2$s']/tbody/tr[%3$d]/td[%4$d]", ByUtils.TABLE, classe, linha, coluna));
+	}
+
+	public static By encontraByTableData(String classe, int linha, int coluna, int indice) {
+		return By.xpath(String.format("(//%1$s[@id='%2$s']/tbody/tr[%3$d]/td[%4$d])[%5$d]", ByUtils.TABLE, classe,
+				linha, coluna, indice));
 	}
 }

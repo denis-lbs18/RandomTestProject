@@ -16,10 +16,10 @@ public class TelaControleDoPonto extends TelaBase {
 	private By tableTotalHorasDiaAtual = ByUtils.encontraByClass(ByUtils.TD, "Col-Center", 8);
 	private By botaoEfetuarLancamento = ByUtils.encontraByClass(ByUtils.INPUT, "btn");
 
-	private By tableHoraEntrada1 = ByUtils.encontraByClass(ByUtils.TD, "Col-Center", 2);
-	private By tableHoraSaida1 = ByUtils.encontraByClass(ByUtils.TD, "Col-Center", 4);
-	private By tableHoraEntrada2 = ByUtils.encontraByClass(ByUtils.TD, "Col-Center", 6);
-	private By tableHoraSaida2 = ByUtils.encontraByClass(ByUtils.TD, "Col-Center", 8);
+	private By tableHoraEntrada1 = ByUtils.encontraByTableData("ctl00_ContentConteudo_GridView1", 2, 3);
+	private By tableHoraSaida1 = ByUtils.encontraByTableData("ctl00_ContentConteudo_GridView1", 3, 3);
+	private By tableHoraEntrada2 = ByUtils.encontraByTableData("ctl00_ContentConteudo_GridView1", 4, 3);
+	private By tableHoraSaida2 = ByUtils.encontraByTableData("ctl00_ContentConteudo_GridView1", 5, 3);
 
 	public TelaControleDoPonto(WebDriver driver) {
 		super(driver);
