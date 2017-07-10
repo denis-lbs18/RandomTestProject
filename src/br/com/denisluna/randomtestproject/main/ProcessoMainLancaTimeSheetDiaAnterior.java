@@ -12,8 +12,6 @@ public class ProcessoMainLancaTimeSheetDiaAnterior {
 
 	public static void main(String[] args) {
 		final JsonUtils jsonReader = new JsonUtils();
-
-		System.setProperty("webdriver.gecko.driver", "data/geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();
 
 		TelaHome telaHome = new TelaDeLogin(driver).loga();
