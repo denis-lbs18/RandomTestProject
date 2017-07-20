@@ -40,14 +40,15 @@ public class ProcessoMainEncerraTrabalhoLancaTimeSheet {
 		TelaTimeSheets telaTimeSheets = telaHome.clicaMenuLancamentoDeTimeSheets();
 
 		telaTimeSheets.clicaBotaoLancarTimeSheet();
+
+		telaTimeSheets.setInputDataTrabalhada(dataTrabalhada);
+		telaTimeSheets.setInputHorasTrabalhadas(horasTrabalhadas);
+		telaTimeSheets.setInputDescricao(jsonReader.getDescricao());
+
 		telaTimeSheets.selecionaProjeto(jsonReader.getProjeto());
 		telaTimeSheets.selecionaDemanda(jsonReader.getDemanda());
 		telaTimeSheets.selecionaTarefa(jsonReader.getTarefa());
 
-		telaTimeSheets.setInputDataTrabalhada(dataTrabalhada);
-		telaTimeSheets.setInputHorasTrabalhadas(horasTrabalhadas);
-
-		telaTimeSheets.setInputDescricao(jsonReader.getDescricao());
 		telaTimeSheets.clicaBotaoSalvar();
 		telaTimeSheets.fecha();
 	}

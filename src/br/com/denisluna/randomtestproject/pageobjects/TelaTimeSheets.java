@@ -70,6 +70,7 @@ public class TelaTimeSheets extends TelaBase {
 	}
 
 	public void clicaBotaoSalvar() {
+		this.sleep(TempoTimeouts.TEMPOMEDIO);
 		this.getElemento().elementoWebClica(this.botaoSalvar);
 		this.sleep(TempoTimeouts.TEMPOLONGO);
 	}
