@@ -50,6 +50,7 @@ public class ProcessoMainEncerraTrabalhoLancaTimeSheet {
 		telaTimeSheets.selecionaTarefa(jsonReader.getTarefa());
 
 		telaTimeSheets.clicaBotaoSalvar();
-		telaTimeSheets.fecha();
+		if (telaTimeSheets.mensagemTimeSheetLancadoEstaVisivel())
+			telaTimeSheets.fecha();
 	}
 }

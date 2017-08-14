@@ -69,8 +69,13 @@ public class TelaTimeSheets extends TelaBase {
 		this.getElemento().elementoWebInsereTexto(this.inputHorasTrabalhadas, value);
 	}
 
-	public void clicaBotaoSalvar() {
+	public boolean mensagemTimeSheetLancadoEstaVisivel() {
 		this.sleep(TempoTimeouts.TEMPOMEDIO);
+		return this.getElemento()
+				.elementoWebEstaVisivelWait(ByUtils.encontraByTexto(ByUtils.DIV, "TimeSheet Lançado com Sucesso!"));
+	}
+
+	public void clicaBotaoSalvar() {
 		this.getElemento().elementoWebClica(this.botaoSalvar);
 		this.sleep(TempoTimeouts.TEMPOLONGO);
 	}
