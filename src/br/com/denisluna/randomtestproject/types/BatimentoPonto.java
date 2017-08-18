@@ -5,11 +5,13 @@ import java.util.TimerTask;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import br.com.denisluna.randomtestproject.pageobjects.TelaControleDoPonto;
 import br.com.denisluna.randomtestproject.pageobjects.TelaDeLogin;
 import br.com.denisluna.randomtestproject.pageobjects.TelaHome;
 
 public class BatimentoPonto extends TimerTask {
 	private TelaHome telaHome;
+	private TelaControleDoPonto telaPonto;
 
 	@Override
 	public void run() {
@@ -18,7 +20,10 @@ public class BatimentoPonto extends TimerTask {
 		this.telaHome.setDadosIniciais();
 
 		this.telaHome.clicaMenuPonto();
-		this.telaHome.clicaMenuLancamentoDePonto().clicaBotaoEfetuarLancamento();
+		this.telaPonto = this.telaHome.clicaMenuLancamentoDePonto();
+		this.telaPonto.clicaBotaoEfetuarLancamento();
+		this.telaPonto.trataConfirmaLancamento();
+
 		this.telaHome.fecha();
 	}
 }
