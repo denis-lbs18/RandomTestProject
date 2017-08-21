@@ -78,8 +78,9 @@ public class TelaControleDoPonto extends TelaBase {
 	}
 
 	public void trataConfirmaLancamento() {
-		if (this.getElemento().elementoWebEstaVisivelWait(botaoConfirmaLancamento))
+		if (this.getElemento().elementoWebEstaVisivelWait(botaoConfirmaLancamento)) {
 			this.getElemento().elementoWebClica(this.botaoConfirmaLancamento);
-		;
+			this.sleep(TempoTimeouts.TEMPOMEDIO);
+		}
 	}
 }

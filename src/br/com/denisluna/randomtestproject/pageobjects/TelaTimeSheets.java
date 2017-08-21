@@ -14,7 +14,7 @@ public class TelaTimeSheets extends TelaBase {
 	private By inputDataTrabalhada = ByUtils.encontraByClass(ByUtils.INPUT, "span2", 1);
 	private By inputHorasTrabalhadas = ByUtils.encontraByClass(ByUtils.INPUT, "input-md", 1);
 	private By inputDescricao = ByUtils.encontraByClass(ByUtils.TEXTAREA, "input-md");
-	private By botaoSalvar = ByUtils.encontraByValue(ByUtils.INPUT, "Salvar");
+	private By botaoSalvar = ByUtils.encontraByID(ByUtils.INPUT, "ctl00_ContentConteudo_btnSalvar");
 
 	public TelaTimeSheets(WebDriver driver) {
 		super(driver);
