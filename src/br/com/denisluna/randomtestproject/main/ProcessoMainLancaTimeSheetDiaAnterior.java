@@ -21,8 +21,8 @@ public class ProcessoMainLancaTimeSheetDiaAnterior {
 		 * telaHome.clicaMenuLancamentoDePonto();
 		 * telaPonto.clicaBotaoEfetuarLancamento();
 		 */
-		String dataTrabalhada = "22/06/2017";
-		String horasTrabalhadas = "08:11";
+		String dataTrabalhada = "14/11/2017";
+		String horasTrabalhadas = "08:36";
 
 		System.out.println(dataTrabalhada);
 		System.out.println(horasTrabalhadas);
@@ -31,16 +31,18 @@ public class ProcessoMainLancaTimeSheetDiaAnterior {
 		TelaTimeSheets telaTimeSheets = telaHome.clicaMenuLancamentoDeTimeSheets();
 
 		telaTimeSheets.clicaBotaoLancarTimeSheet();
-		telaTimeSheets.selecionaProjeto(jsonReader.getProjeto());
-		telaTimeSheets.selecionaDemanda(jsonReader.getDemanda());
-		telaTimeSheets.selecionaTarefa(jsonReader.getTarefa());
 
 		telaTimeSheets.setInputDataTrabalhada(dataTrabalhada);
 		telaTimeSheets.setInputHorasTrabalhadas(horasTrabalhadas);
 
 		telaTimeSheets.setInputDescricao(jsonReader.getDescricao());
 
+		telaTimeSheets.selecionaProjeto(jsonReader.getProjeto());
+		telaTimeSheets.selecionaDemanda(jsonReader.getDemanda());
+		telaTimeSheets.selecionaTarefa(jsonReader.getTarefa());
+
 		telaTimeSheets.clicaBotaoSalvar();
-		telaTimeSheets.fecha();
+		if (telaTimeSheets.mensagemTimeSheetLancadoEstaVisivel())
+			telaTimeSheets.fecha();
 	}
 }

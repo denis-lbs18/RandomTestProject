@@ -14,8 +14,7 @@ public class TelaControleDoPonto extends TelaBase {
 	private By botaoPesquisar = ByUtils.encontraByValue(ByUtils.INPUT, "Pesquisar");
 	private By tableDataDiaAtual = ByUtils.encontraByClass(ByUtils.TD, "Col-Center", 3);
 	private By tableTotalHorasDiaAtual = ByUtils.encontraByClass(ByUtils.TD, "Col-Center", 8);
-	private By botaoEfetuarLancamento = ByUtils.encontraByID(ByUtils.INPUT,
-			"ctl00_ContentConteudo_ConfirmarFechamento");
+	private By botaoEfetuarLancamento = ByUtils.encontraByValue(ByUtils.INPUT, "Efetuar Marcação", 1);
 	private By botaoConfirmaLancamento = ByUtils.encontraByID(ByUtils.INPUT, "ctl00_ContentConteudo_btnSalvar");
 
 	private By tableHoraEntrada1 = ByUtils.encontraByTableData("ctl00_ContentConteudo_GridView1", 2, 3);
