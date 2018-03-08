@@ -1,5 +1,6 @@
 package br.com.denisluna.randomtestproject.utils;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
@@ -78,7 +79,8 @@ public class JsonUtils {
 	public void abreArquivo() {
 		JSONParser parser = new JSONParser();
 		try {
-			Object object = parser.parse(new FileReader("data/dados.json"));
+			File arquivo = new File(this.getClass().getResource("/dados.json").getFile());
+			Object object = parser.parse(new FileReader(arquivo));
 
 			JSONObject jsonObject = (JSONObject) object;
 

@@ -66,6 +66,8 @@ public class TelaTimeSheets extends TelaBase {
 
 	public void setInputHorasTrabalhadas(String value) {
 		this.sleep(TempoTimeouts.TEMPOPADRAOTELA);
+		// this.getElemento().elementoWebInsereTexto(this.inputHorasTrabalhadas,
+		// Keys.HOME);
 		this.getElemento().elementoWebInsereTexto(this.inputHorasTrabalhadas, value);
 	}
 
@@ -76,7 +78,7 @@ public class TelaTimeSheets extends TelaBase {
 	}
 
 	public void clicaBotaoSalvar() {
-		this.getElemento().elementoWebClica(this.botaoSalvar);
 		this.sleep(TempoTimeouts.TEMPOLONGO);
+		this.getElemento().elementoWebClica(this.botaoSalvar);
 	}
 }

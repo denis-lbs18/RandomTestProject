@@ -1,6 +1,7 @@
 package br.com.denisluna.randomtestproject.pageobjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import br.com.denisluna.randomtestproject.utils.ByUtils;
@@ -37,6 +38,10 @@ public class TelaDeLogin extends TelaBase {
 		this.getElemento().elementoWebClica(this.botaoEntrar);
 	}
 
+	public void apertaEsc() {
+		this.getElemento().elementoWebInsereTexto(inputSenha, Keys.ESCAPE);
+	}
+
 	public TelaHome loga() {
 		JsonUtils json = new JsonUtils();
 		this.navega(json.getUrl());
@@ -44,6 +49,7 @@ public class TelaDeLogin extends TelaBase {
 		this.setChave(this.getChave());
 		this.setLogin(json.getUsuario());
 		this.setSenha(json.getSenha());
+		this.apertaEsc();
 		this.clicaBotaoEntrar();
 
 		return new TelaHome(this.getDriver());

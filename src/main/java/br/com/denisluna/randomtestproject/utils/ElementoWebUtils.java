@@ -187,6 +187,10 @@ public class ElementoWebUtils {
 		this.elementoWebAchaElemento(by).sendKeys(value);
 	}
 
+	public void elementoWebInsereTexto(By by, Keys key) {
+		this.elementoWebAchaElemento(by).sendKeys(key);
+	}
+
 	/**
 	 * Método que permite utilizar o Método click() em um WebElement.
 	 * 

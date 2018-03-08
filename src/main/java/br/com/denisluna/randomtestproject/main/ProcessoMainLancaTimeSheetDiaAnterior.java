@@ -13,16 +13,11 @@ public class ProcessoMainLancaTimeSheetDiaAnterior {
 	public static void main(String[] args) {
 		final JsonUtils jsonReader = new JsonUtils();
 		WebDriver driver = new FirefoxDriver();
-
 		TelaHome telaHome = new TelaDeLogin(driver).loga();
 		telaHome.setDadosIniciais();
-		/*
-		 * telaHome.clicaMenuPonto(); TelaControleDoPonto telaPonto =
-		 * telaHome.clicaMenuLancamentoDePonto();
-		 * telaPonto.clicaBotaoEfetuarLancamento();
-		 */
-		String dataTrabalhada = "14/11/2017";
-		String horasTrabalhadas = "08:36";
+
+		String dataTrabalhada = "07/03/2018";
+		String horasTrabalhadas = "08:15";
 
 		System.out.println(dataTrabalhada);
 		System.out.println(horasTrabalhadas);

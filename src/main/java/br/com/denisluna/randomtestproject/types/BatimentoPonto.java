@@ -3,7 +3,7 @@ package br.com.denisluna.randomtestproject.types;
 import java.util.TimerTask;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import br.com.denisluna.randomtestproject.pageobjects.TelaControleDoPonto;
 import br.com.denisluna.randomtestproject.pageobjects.TelaDeLogin;
@@ -15,7 +15,7 @@ public class BatimentoPonto extends TimerTask {
 
 	@Override
 	public void run() {
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new FirefoxDriver();
 		this.telaHome = new TelaDeLogin(driver).loga();
 		this.telaHome.setDadosIniciais();
 
