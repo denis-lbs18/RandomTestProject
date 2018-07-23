@@ -10,7 +10,6 @@ public class ProcessoMainAlmoco {
 		Timer timer = new Timer();
 
 		CalendarUtils calendario = new CalendarUtils();
-		calendario.setHora();
 		calendario.escreveHora();
 
 		timer.schedule(new BatimentoPonto(), calendario.getTime());

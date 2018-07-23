@@ -80,20 +80,6 @@ public class ElementoWebUtils {
 	}
 
 	/**
-	 * Método que executa um Thread.sleep, efetuando uma pausa no teste.
-	 * 
-	 * @param l
-	 *            quantidade de milissegundos que o teste deve aguardar
-	 */
-	private void sleep(long l) {
-		try {
-			Thread.sleep(l);
-		} catch (InterruptedException ex) {
-			Thread.currentThread().interrupt();
-		}
-	}
-
-	/**
 	 * Método que busca clicar no elemento, impedindo que o erro "element is no
 	 * longer attached to the DOM" aconteça
 	 * 
@@ -112,8 +98,8 @@ public class ElementoWebUtils {
 	}
 
 	/**
-	 * Método que permite selecionar uma opção do combobox pelo index. Seleciona
-	 * o índice na lista e aperta o enter.
+	 * Método que permite selecionar uma opção do combobox pelo index. Seleciona o
+	 * índice na lista e aperta o enter.
 	 * 
 	 * @param by
 	 *            o identificador By do elemento a ser selecionado
@@ -122,13 +108,7 @@ public class ElementoWebUtils {
 	 */
 	public void elementoWebSelecionaListaPorIndex(By by, int index) {
 		try {
-			WebElement elemento = this.elementoWebAchaElemento(by);
-			this.click(elemento, by);
-			Select lista = new Select(elemento);
-			lista.selectByIndex(index);
-
-			this.sleep(TempoTimeouts.TEMPOPADRAOTELA);
-			elemento.sendKeys(Keys.ENTER);
+			new Select(this.elementoWebAchaElemento(by)).selectByIndex(index);
 		} catch (Exception ex) {
 			System.out.println("Erro ao selecionar opção por index.");
 		}
@@ -152,8 +132,8 @@ public class ElementoWebUtils {
 	}
 
 	/**
-	 * Método que permite selecionar uma opção do combobox pelo texto. Seleciona
-	 * o texto da lista e aplica o enter.
+	 * Método que permite selecionar uma opção do combobox pelo texto. Seleciona o
+	 * texto da lista e aplica o enter.
 	 * 
 	 * @param by
 	 *            o identificador By do elemento a ser selecionado
@@ -162,13 +142,7 @@ public class ElementoWebUtils {
 	 */
 	public void elementoWebSelecionaListaPorTexto(By by, String value) {
 		try {
-			WebElement elemento = this.elementoWebAchaElemento(by);
-			this.click(elemento, by);
-			Select lista = new Select(elemento);
-			lista.selectByVisibleText(value);
-
-			this.sleep(TempoTimeouts.TEMPOPADRAOTELA);
-			elemento.sendKeys(Keys.ENTER);
+			new Select(this.elementoWebAchaElemento(by)).selectByVisibleText(value);
 		} catch (Exception ex) {
 			System.out.println("Erro ao selecionar opção por texto." + ex.getClass().getSimpleName());
 		}
@@ -237,9 +211,8 @@ public class ElementoWebUtils {
 	}
 
 	/**
-	 * Método que retorna se elemento web está visível na tela, utilizando o
-	 * recurso WebDriverWait que espera um determinado tempo até o elemento
-	 * ficar visível.
+	 * Método que retorna se elemento web está visível na tela, utilizando o recurso
+	 * WebDriverWait que espera um determinado tempo até o elemento ficar visível.
 	 * 
 	 * @param by
 	 *            o identificador By do elemento a ser selecionado

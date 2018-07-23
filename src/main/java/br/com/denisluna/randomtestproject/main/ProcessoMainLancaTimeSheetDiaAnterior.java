@@ -16,8 +16,8 @@ public class ProcessoMainLancaTimeSheetDiaAnterior {
 		TelaHome telaHome = new TelaDeLogin(driver).loga();
 		telaHome.setDadosIniciais();
 
-		String dataTrabalhada = "07/03/2018";
-		String horasTrabalhadas = "08:15";
+		String dataTrabalhada = "19/07/2018";
+		String horasTrabalhadas = "08:00";
 
 		System.out.println(dataTrabalhada);
 		System.out.println(horasTrabalhadas);

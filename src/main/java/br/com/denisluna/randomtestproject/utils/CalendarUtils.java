@@ -5,27 +5,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 public class CalendarUtils {
-	private Calendar calendario;
-
-	public void setHora() {
-		Date date = new Date();
-		this.calendario = GregorianCalendar.getInstance();
-
-		this.calendario.setTime(date);
-		this.calendario.get(Calendar.HOUR_OF_DAY);
-		this.calendario.get(Calendar.HOUR);
-		this.calendario.get(Calendar.MONTH);
-	}
+	private Calendar calendario = Calendar.getInstance();
 
 	public void adicionaHora(int horas) {
-		this.calendario.set(Calendar.HOUR, this.getHora() + 1);
-	}
-
-	private int getHora() {
-		return this.calendario.get(Calendar.HOUR);
+		this.calendario.add(Calendar.HOUR, horas);
 	}
 
 	public void escreveHora() {

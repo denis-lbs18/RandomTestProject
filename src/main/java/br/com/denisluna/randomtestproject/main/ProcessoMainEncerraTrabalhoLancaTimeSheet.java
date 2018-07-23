@@ -22,7 +22,7 @@ public class ProcessoMainEncerraTrabalhoLancaTimeSheet {
 
 		telaHome.clicaMenuPonto();
 		TelaControleDoPonto telaPonto = telaHome.clicaMenuLancamentoDePonto();
-		telaPonto.clicaBotaoEfetuarLancamento();
+		// telaPonto.clicaBotaoEfetuarLancamento();
 		// telaPonto.trataConfirmaLancamento();
 
 		CalendarUtils calendar = new CalendarUtils();
